@@ -1,41 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   --FuentePrincipal: "Parkinsans", sans-serif;
   --FuenteSecundaria: "Shadows Into Light", cursive;
   --BlueMain: #0059a7;
+  --BlueLight: #2419ff;
   --CoralMain: #d32f2f;
+  --DarkMain: #30374f;
 }
 
-body{
+body {
   font-family: var(--FuentePrincipal);
+  scroll-behavior: smooth;
 }
 
-hr{
+hr {
   border: 1px solid var(--BlueMain);
 }
 
-.cursiva{
+.cursiva {
   font-family: var(--FuenteSecundaria);
 }
 
-.active{
+.imgShadow {
+  mask-image: linear-gradient(black 90%, transparent);
+}
+
+.navbarLink {
+  padding: 12px;
+  transition: all 300ms ease;
+}
+
+.navbarLink:hover {
   background-color: var(--CoralMain);
 }
 
-.opacityWhite{
-  mask-image: linear-gradient(
-    black 90%,
-    transparent
-  );
+.active {
+  background-color: var(--CoralMain);
 }
 
-/* From Uiverse.io by AqFox */ 
+.navbarLinkProduct {
+  padding: 12px;
+  background-color: white;
+  border: 2px solid var(--BlueMain);
+  color: var(--BlueMain);
+  transition: all 300ms ease;
+}
+
+.navbarLinkProduct:hover {
+  background-color: var(--BlueMain);
+  color: white;
+}
+
+.activeProduct {
+  background-color: var(--BlueMain);
+  color: white;
+}
+
+.opacityWhite {
+  mask-image: linear-gradient(black 90%, transparent);
+}
+
+/* From Uiverse.io by AqFox */
 .btn {
   position: relative;
   display: inline-block;
@@ -68,7 +99,7 @@ hr{
 }
 
 .btn-1 span {
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
   border: 1px solid #004dff;
   transition: 0.2s 0.1s;
 }
@@ -78,8 +109,10 @@ hr{
   transition: 0.2s 0.1s;
 }
 
-:active, :hover, :focus {
-  outline: 0!important;
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
   outline-offset: 0;
 }
 
@@ -100,7 +133,6 @@ hr{
 .btn.hover-filled-slide-left:hover::before {
   width: 0%;
 }
-
 
 /* Testimonial container */
 .testimonial-container {
@@ -246,7 +278,7 @@ hr{
 }
 
 /* BUTTON SUBSCRIBE */
-/* From Uiverse.io by alexruix */ 
+/* From Uiverse.io by alexruix */
 .input-group {
   display: flex;
   align-items: center;
@@ -266,27 +298,28 @@ hr{
 
 .button--submit {
   min-height: 50px;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border: none;
   border-radius: 0 6px 6px 0;
   background-color: #004dff;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .button--submit:hover {
   background-color: var(--BlueMain);
 }
 
-.input:focus, .inputSubscribe:focus-visible {
-  border-color: #3898EC;
+.input:focus,
+.inputSubscribe:focus-visible {
+  border-color: #3898ec;
   outline: none;
 }
 
 /* SOCIAL MEDIA BUTTON */
-/* From Uiverse.io by david-mohseni */ 
+/* From Uiverse.io by david-mohseni */
 .wrapper {
   display: inline-flex;
   list-style: none;
@@ -372,4 +405,269 @@ hr{
 .wrapper .instagram:hover .tooltip::before {
   background: #e4405f;
   color: #fff;
+}
+
+/* FORMULARIO DE CONTACTO */
+.container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #396afc;
+  background: linear-gradient(to bottom, var(--BlueMain), var(--DarkMain));
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container form .descr {
+  font-size: 40px;
+  font-weight: 500;
+  color: #e8e8e8;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.input {
+  margin: 1em 0;
+  width: 95%;
+  position: relative;
+}
+
+.input input,
+.input textarea {
+  font-size: 100%;
+  padding: 0.7em 0.4em;
+  outline: none;
+  color: #e8e8e8;
+  border: none;
+  border-bottom: 2px solid #e8e8e8;
+  background: transparent;
+  width: 100%;
+  resize: none;
+}
+
+.input label {
+  font-size: 100%;
+  position: absolute;
+  top: 0.7em;
+  left: 0.1em;
+  color: #e8e8e8;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label,
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  transform: translateY(-1.5em) scale(0.9);
+  background: transparent;
+}
+
+.form button {
+  color: #e8e8e8;
+  font-size: 1rem;
+  align-self: center;
+  padding: 0.6em;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background: var(--CoralMain);
+  transition: all 0.3s ease-in-out;
+}
+
+.form button:hover {
+  transform: scale(1.1);
+  background-color: #e4405f;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .form button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container form .descr {
+    font-size: 30px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+/* INICIAR SESION */
+
+.formSignIn {
+  background-color: #fff;
+  display: block;
+  padding: 1rem;
+  width: 450px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-titleSignIn {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.input-containerSignIn {
+  position: relative;
+}
+
+.input-containerSignIn input,
+.formSignIn button {
+  margin: 8px 0;
+}
+
+.input-containerSignIn input {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  border: 1px solid;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.input-containerSignIn input::placeholder {
+  color: #30374f;
+}
+
+.submitSignIn {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin: 20px 0;
+  background-color: var(--BlueLight);
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+}
+
+.submitSignIn:hover {
+  background-color: var(--BlueMain);
+}
+
+/* REGISTRAR */
+.registerBackground {
+  border-radius: 25px 0 0 25px;
+  background-image: url("./assets/register.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .registerBackground {
+    border-radius: 25px 25px 0 0;
+    padding: 10px 0;
+  }
+}
+
+/* From Uiverse.io by FahadArnob52539 */
+
+.register {
+  height: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0 25px 25px 0;
+}
+
+@media (max-width: 1024px) {
+  .register {
+    border-radius: 0 0 25px 25px;
+    padding: 10px 0;
+  }
+}
+
+.loginRegister {
+  padding: 20px;
+  width: 500px;
+}
+
+@media (max-width: 1024px) {
+  .loginRegister {
+    width: 100%;
+  }
+}
+.haderRegister {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.register form input {
+  height: 40px;
+  border: 1px solid;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.register form input::placeholder {
+  color: #30374f;
+}
+
+.register form .btn_register {
+  background-color: var(--BlueLight);
+  color: #ffffff;
+  font-size: 17px;
+  padding: 10px 0;
+  border-radius: 10px;
+  transition: all 200ms ease;
+}
+
+.register form .btn_register:hover {
+  background-color: var(--BlueMain);
+}
+
+.register form span {
+  text-align: center;
+  font-size: 16px;
+  padding-top: 10px;
+  color: #706b6b;
+}
+.register form span a {
+  text-decoration: none;
+  color: rgba(36, 36, 207, 0.671);
+  font-weight: 500;
 }

@@ -6,37 +6,33 @@ const MenuNavbar = () => {
       <div className="w-[80%] m-auto flex items-center justify-between text-white">
         <div>
           <ul className="flex transition-all delay-150 ease-out">
-            <NavLink
-              to="/"
-              className="p-3 hover:bg-CoralMain"
-              activeClassName="active"
-            >
+            <NavLink to="/" className="navbarLink" activeClassName="active">
               Inicio
             </NavLink>
             <NavLink
               to="/productos"
-              className="p-3 hover:bg-CoralMain"
+              className="navbarLink"
               activeClassName="active"
             >
               Productos
             </NavLink>
             <NavLink
               to="/novedades"
-              className="p-3 hover:bg-CoralMain"
+              className="navbarLink"
               activeClassName="active"
             >
               Novedades
             </NavLink>
             <NavLink
               to="/nosotros"
-              className="p-3 hover:bg-CoralMain"
+              className="navbarLink"
               activeClassName="active"
             >
               Nosotros
             </NavLink>
             <NavLink
               to="/contacto"
-              className="p-3 hover:bg-CoralMain"
+              className="navbarLink"
               activeClassName="active"
             >
               Contacto
@@ -45,13 +41,17 @@ const MenuNavbar = () => {
         </div>
 
         <div>
-          <Link className=" hover:text-CoralMain">Registrar</Link>
+          <Link to="/registrar" className=" hover:text-CoralMain">
+            Registrar
+          </Link>
           <span> | </span>
-          <Link className=" hover:text-CoralMain">Iniciar Sesión</Link>
+          <Link to="/iniciar-sesion" className=" hover:text-CoralMain">
+            Iniciar Sesión
+          </Link>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default MenuNavbar
+export default MenuNavbar;

@@ -1,9 +1,9 @@
-import Mision from '../assets/mision.jpg';
-import Vision from '../assets/vision.jpg';
+import Mision from "../assets/mision.jpg";
+import Vision from "../assets/vision.jpg";
 
 const MissionAndVision = () => {
   return (
-    <div className=" flex justify-between gap-2 my-6">
+    <div className=" flex flex-col sm:flex-row justify-between gap-2 my-6">
       {/* Card 1 */}
       <div
         className="flex flex-1 flex-col items-center text-center rounded-lg p-6 shadow-lg text-white bg-cover bg-center relative"
@@ -47,6 +47,6 @@ const MissionAndVision = () => {
       </div>
     </div>
   );
-}
+};
 
-export default MissionAndVision
+export default MissionAndVision;

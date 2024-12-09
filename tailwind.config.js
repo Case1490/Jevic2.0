@@ -7,6 +7,7 @@ export default {
         BlueMain: "#0059a7",
         CoralMain: "#d32f2f",
         DarkMain: "#30374f",
+        BlueLight: "#2419ff",
       },
     },
   },

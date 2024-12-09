@@ -30,12 +30,12 @@ const CardProduct = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill={`${isLiked ? "#FF0000" : "#ffff"}`}
-            width="36"
-            height="36"
+            width="30"
+            height="30"
             strokeWidth="2"
             strokeLinejoin="round"
             strokeLinecap="round"
-            stroke="currentColor"
+            stroke={`${isLiked ? "#FF0000" : "currentColor"}`}
           >
             <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
           </svg>
@@ -49,7 +49,7 @@ const CardProduct = () => {
         href=""
         className=" bg-green-500 text-white flex items-center justify-center gap-x-2 py-2 rounded-lg mt-2 uppercase hover:bg-green-600"
       >
-        <WhatsAppIcon/>
+        <WhatsAppIcon />
         Comprar
       </a>
     </div>

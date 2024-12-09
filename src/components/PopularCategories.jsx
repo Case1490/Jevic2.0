@@ -1,13 +1,12 @@
-import CardCategorie from "./CardCategorie"
+import CardCategorie from "./CardCategorie";
 
 // IMPORTANDO IMAGENES DE CATEGORIAS
-import Celular from '../assets/categorias/celular.jpg';
-import SmartWatch from '../assets/categorias/smartwatch.png';
-import Perifericos from '../assets/categorias/perifericos.jpg';
-import Cargadores from '../assets/categorias/cargadores.jpg';
-import Audifonos from '../assets/categorias/audifonos.jpg';
-import CamarasIP from '../assets/categorias/camarasip.jpg';
-
+import Celular from "../assets/categorias/celular.jpg";
+import SmartWatch from "../assets/categorias/smartwatch.png";
+import Perifericos from "../assets/categorias/perifericos.jpg";
+import Cargadores from "../assets/categorias/cargadores.jpg";
+import Audifonos from "../assets/categorias/audifonos.jpg";
+import CamarasIP from "../assets/categorias/camarasip.jpg";
 
 const PopularCategories = () => {
   return (
@@ -24,6 +23,6 @@ const PopularCategories = () => {
       </div>
     </div>
   );
-}
+};
 
-export default PopularCategories
+export default PopularCategories;

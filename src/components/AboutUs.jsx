@@ -1,9 +1,15 @@
-import AboutUsImage from '../assets/aboutUs.jpg';
-import MissionAndVision from './MissionAndVision';
-import Services from './Services';
-import Values from './Values';
+import { useEffect } from "react";
+import AboutUsImage from "../assets/aboutUs.jpg";
+import MissionAndVision from "./MissionAndVision";
+import Services from "./Services";
+import Values from "./Values";
 
 const AboutUs = () => {
+  // Código para que nos lleve al inicio de la página
+  useEffect(() => {
+    window.scrollTo(0, 0); // Desplazarse hacia el inicio
+  }, []);
+
   return (
     <div className="pt-[140px]">
       <div className="w-[80%] m-auto">
@@ -11,8 +17,8 @@ const AboutUs = () => {
           Sobre JevicTecnology
         </h1>
 
-        <div className="flex gap-x-2 my-8">
-          <div className="flex-1 bg-BlueMain text-white rounded-xl flex flex-col items-center justify-center text-center p-2">
+        <div className="flex lg:flex-row flex-col gap-y-3 lg:gap-x-2 my-8">
+          <div className="flex-1 bg-BlueMain text-white rounded-xl flex flex-col items-center justify-center text-center p-4 md:p-2">
             <h1 className="text-3xl font-bold text-center mb-4">
               Cómo nació Jevic
             </h1>
@@ -31,13 +37,11 @@ const AboutUs = () => {
         </div>
 
         <Values />
-        
         <MissionAndVision />
-        
-        <Services/>
+        <Services />
       </div>
     </div>
   );
-}
+};
 
-export default AboutUs
+export default AboutUs;

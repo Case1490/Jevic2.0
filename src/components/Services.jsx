@@ -15,7 +15,7 @@ const Services = () => {
         brindamos servicios innovadores para cubrir tus necesidades industriales
         con calidad y confianza
       </p>
-      <div className="grid grid-cols-3 gap-2 place-items-center">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 place-items-center">
         {/* primer servicio */}
         <div className="flex flex-col items-center justify-center bg-BlueMain p-4 rounded-lg text-white text-center space-y-2 h-full">
           <HelpIcon />
@@ -70,6 +70,6 @@ const Services = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Services
+export default Services;
