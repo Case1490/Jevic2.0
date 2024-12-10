@@ -551,6 +551,14 @@ hr {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
+.input-containerSignIn input:focus {
+  border: 1px solid var(--BlueLight);
+}
+
+.input-containerSignIn .validateInput {
+  border: 1px solid rgb(40, 214, 17);
+}
+
 .input-containerSignIn input::placeholder {
   color: #30374f;
 }
@@ -641,6 +649,10 @@ hr {
   padding: 10px;
   font-size: 15px;
   border-radius: 8px;
+}
+
+.register form input:focus {
+  border: 1px solid var(--BlueLight);
 }
 
 .register form input::placeholder {
